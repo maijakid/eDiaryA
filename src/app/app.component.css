@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+
+/* Header/logo Title */
+.upside {
+	flex: 35%;
+    padding: 20px;
+    text-align: center;
+    background: #28A8A2;
+    color: white;
+}
+
+.up {
+	flex: 65%;
+    padding: 20px;
+    text-align: center;
+    background: #28A8A2;
+    color: white;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.downside {
+    flex: 35%;
+    background-color: #EDF2F0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Main column */
+.main {
+    flex: 65%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
