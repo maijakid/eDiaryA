@@ -1,0 +1,68 @@
+/* * {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 2em;
+}
+body, input[text], button {
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.side {
+	flex: 35%;
+    padding: 20px;
+    text-align: center;
+    background: #EDF2F0;
+    color: gray;
+}
+
+.main {
+	flex: 65%;
+    padding: 20px;
+    text-align: center;
+    background: yellow;
+}
+
+/* Column container */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Header */
+.header {
+    padding: 20px;
+    text-align: center;
+    background: white;
+}
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}

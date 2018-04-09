@@ -1,0 +1,16 @@
+<p>
+  subject works!
+  {{selectedSubject.subject}}
+</p>
+
+<div>
+  <button type="button" class="btn btn-success btn-block" href="location.href='subjects'"
+   *ngFor="let subject of subjects" routerLink="/subject/{{subject.id}}">{{subject.subject}}</button> <!--(click)="goToPath"> zamenjeno -->
+</div>
+
+<div class="main">
+    <router-outlet name="subjectDetail">
+      {{subject.subject}}   <!-- ovo ne rad -->
+    </router-outlet>
+
+</div>
