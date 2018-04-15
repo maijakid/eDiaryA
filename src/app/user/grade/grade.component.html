@@ -1,3 +1,28 @@
 <p>
   grade works!
+  <button type="button" class="btn btn-default btn-block" (click)="goBack()">◄◄◄ Nazad na listu učenika</button>
 </p>
+<div class="main">
+      <table class="table" >
+        <thead>
+          <th>id</th>
+          <th>ocena</th>
+          <th>komentar</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let grade of grades">
+            <th>{{grade.id}}</th>
+            <th>{{grade.grade}}</th>
+            <th>{{grade.comment}}</th>
+            <th>
+              <button type="button" class="btn btn-default" (click)="updateGrade(grade)">Izmeni ocenu</button>
+              <button type="button" class="btn btn-danger" (click)="deleteGrade(grade)">x</button>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-default" (click)="addNewGrade()">Unesi novu ocenu</button>
+
+
+
+</div>

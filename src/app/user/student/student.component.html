@@ -1,5 +1,7 @@
 <p>
   student works!
+  <button type="button" class="btn btn-default btn-block" (click)="goBack()">◄◄◄ Nazad na predmete</button>
+  <!-- {{selectedStudent.id}} -->
 </p>
 <div class="side">
       <table class="table table-hover" >
@@ -9,7 +11,7 @@
           <th>prezime</th>
         </thead>
         <tbody>
-          <tr *ngFor="let student of students" routerLink="[student/{{student.id}}]">
+        <tr *ngFor="let student of students" routerLink='./student/{{student.id}}'> <!--[routerLink]="['/subject/:subjectId' , {outlets: {gradesList:['student',student.id]}}]"  -->
             <th>{{student.id}}</th>
             <th>{{student.name}}</th>
             <th>{{student.surname}}</th>

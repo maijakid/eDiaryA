@@ -8,6 +8,8 @@ import 'rxjs/add/observable/throw';
 
 import { Student } from '../student';
 
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Injectable()
 export class StudentService {
@@ -15,7 +17,9 @@ export class StudentService {
   private headers = new Headers({'Content.Type':'application/json'});
   private options = new RequestOptions({headers:this.headers});
 
-  constructor(private http:Http) { } //sending req to the plugin 5:06 #4
+  constructor(private http:Http,
+    private route: ActivatedRoute,
+    private location: Location) { } //sending req to the plugin 5:06 #4
 
   // GET getAllStudents
   getAllStudents(){

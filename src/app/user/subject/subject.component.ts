@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SubjectService } from '../../service/subject.service';
 import { Subject } from '../../subject';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-subject',
@@ -11,9 +12,10 @@ import { Router } from '@angular/router';
 export class SubjectComponent implements OnInit {
 
   private subjects:Subject[];
-  selectedSubject: Subject;
+  // private location: Location;
+  // selectedSubject: Subject;
 
-  constructor(private router:Router, private subjectService:SubjectService) { }
+  constructor(private router:Router, private subjectService:SubjectService, private location: Location) { }
 
   ngOnInit() {
     this.subjectService.getAllSubjects().subscribe((subjects)=>{
@@ -24,9 +26,13 @@ export class SubjectComponent implements OnInit {
     })
   }
 
-  onSelect(subject: Subject): void {
-    this.selectedSubject = subject;
+
+  goBack(): void {
+    this.location.back();
   }
+  // onSelect(subject: Subject): void {
+  //   this.selectedSubject = subject;
+  // }
 
   // goToPath(subject) {
   //   this.router.navigate(['/subject/:id']);

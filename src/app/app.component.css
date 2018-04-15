@@ -20,6 +20,7 @@ body, input[text], button {
   color: #888;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /* everywhere else */
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -29,7 +30,7 @@ body, input[text], button {
 .side {
 	flex: 35%;
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
     background: #EDF2F0;
     color: gray;
 }
@@ -37,7 +38,7 @@ body, input[text], button {
 .main {
 	flex: 65%;
     padding: 20px;
-    text-align: center;
+    /* text-align: center; */
     background: yellow;
 }
 
